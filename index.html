@@ -5,10 +5,26 @@
     <title></title>
 
     <script type="text/javascript">
-
+    function clickCounter() {
+        if(typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+                localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "HATIN' COUNT: <strong><span id=\"counter\">" +localStorage.clickcount + "</span></strong><em> and another one</em>";
+        } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+    }
     </script>
 
     <style>
+
+    #counter{
+      font-size: 2em;
+      color: green;
+    }
     body{
       background-image: url('matt.png');
       background-repeat: repeat;
@@ -39,8 +55,9 @@
 
     #white{
       color: blue;
-      font-size: 5em;
+      font-size: 3em;
       text-align: center;
+      font-weight: bolder;
     }
 
     .button {
@@ -56,7 +73,17 @@
     cursor: pointer;
 }
 
+#stop{
+  font-size: 3em;
+  color: green;
+  font-weight: bolder;
+  text-align: center;
+}
+
     </style>
+
+
+
   </head>
   <body>
     <audio controls autoplay>
@@ -91,17 +118,17 @@
 
 <div id="white">
 
-<p style="font-size:0.3em; color:white;"><strong>PLLEASE SUPPORT MR RITZY AND FIGHT AGAISNT MATT</strong></p>
- <script type="text/javascript">
- var clicks = 0;
- function onClick() {
-     clicks += 1;
-     document.getElementById("clicks").innerHTML = clicks;
- };
- </script>
+<p style="font-size:0.5em; color:white;"><strong>PLLEASE SUPPORT MR RITZY AND FIGHT AGAISNT MATT</strong></p>
 
- <button class="button" type="button" onClick="onClick()">MATT BE HATIN'? TAAPP ME</button>
- <p style="color:green;"><strong>Hatin' Count:</strong> <br /> <a id="clicks">0</a></p>
+<p><button class="button" onclick="clickCounter()" type="button">MATT BE HATIN' YOU? TAAPP ME</button></p>
+<div id="result">HATIN' COUNT: *CLICK THE BUTTON</em>;</div>
+
+</div>
+
+
+<div id="stopback">
+  <p id="stop">#STOPMATT2016<br />#PROTECTRITZY<br />#STOPTHEHATE</p>
+
 </div>
 
 
