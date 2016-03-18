@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title></title>
 
+    <script type="text/javascript">
+
+    </script>
+
     <style>
     body{
       background-image: url('matt.png');
@@ -29,12 +33,34 @@
       float: left;
     }
 
+    #id{
+      clear: both;
+    }
+
+    #white{
+      color: blue;
+      font-size: 5em;
+      text-align: center;
+    }
+
+    .button {
+    background-color: #4CAF50;
+    border: 5px solid red;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
 
     </style>
   </head>
   <body>
     <audio controls autoplay>
-     <source src="baby.mp3" type="audio/mpeg">
+     <source src="hate.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio>
 
@@ -53,16 +79,33 @@
     <h1> ALWAYS BE HATING</h1>
     <h1> WORST MOD EVER </h1>
     <h1> ALWAYS BE HATING</h1>
-
 </div>
 
-
-<div id="fat1">
-  <img src="fat1.gif" alt="fat Icon" style="width:300px;height:300px;">
-</div>
-<div id="fat2">
+<div>
+  <img src="rekt.gif" alt="fat Icon" style="width:300px;height:300px;">
   <img src="fat2.gif" alt="fat Icon" style="width:300px;height:300px;">
+  <img src="hate.gif" alt="fat Icon" style="width:300px;height:300px;">
 </div>
+
+<div id="clear"></div>
+
+<div id="white">
+
+<p style="font-size:0.3em; color:white;"><strong>PLLEASE SUPPORT MR RITZY AND FIGHT AGAISNT MATT</strong></p>
+ <script type="text/javascript">
+ var clicks = 0;
+ function onClick() {
+     clicks += 1;
+     document.getElementById("clicks").innerHTML = clicks;
+ };
+ </script>
+
+ <button class="button" type="button" onClick="onClick()">MATT BE HATIN'? TAAPP ME</button>
+ <p style="color:green"><strong>Hatin' Count:</strong> <br /> <a id="clicks">0</a></p>
+</div>
+
+
+
 
 
   </body>
